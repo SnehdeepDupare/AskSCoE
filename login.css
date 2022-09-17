@@ -26,6 +26,7 @@ body{
 h5{
     font-weight: 800;
     font-size: larger;
+    font-family: 'Baloo Bhai 2', cursive;
 }
 
 #butn{
@@ -36,6 +37,7 @@ h5{
     background-color: rgb(82, 82, 243);
     color: white;
     transition:background-color;
+    font-family: 'Baloo Bhai 2', cursive;
     
     /* animation-name: btn;
     animation-duration: 2s;
@@ -67,3 +69,4 @@ h5{
         background-color: blue;
     }
 } */
+
