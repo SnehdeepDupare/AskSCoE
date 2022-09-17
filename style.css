@@ -36,13 +36,14 @@
 .askbar{
     position: absolute;
     top: 35px;
-    left: 284px;
+    left: 23px;
 
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     width: 700px;
     height: 200px;
     display:flex;
     flex-direction: column;
+    border-bottom: 1px solid black;
 }
 
 #input{
@@ -51,6 +52,33 @@
     /* height: 100px; */
 }
 
-.btn{
-    color: #695CFE;
+.post-btn{
+    background-color: #695CFE;
+    width: 100px;
+    border-radius: 30px;
+    align-self: flex-end;
+    margin: 10px 0px;
+}
+
+.main-section{
+    position: absolute;
+    width: 750px;
+    height: 100vh;
+    /* top: 35px; */
+    left: 273px;
+    background-color: rgb(166, 240, 240);
+    border-right: 2px solid black;
+    
+}
+
+.questions{
+    position: absolute;
+    top: 258px;
+    left: 23px;
+}
+
+.right-section{
+    position: absolute;
+    left: 1058px;
+    font-size: 2rem;
 }
