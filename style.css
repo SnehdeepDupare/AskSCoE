@@ -11,7 +11,7 @@
 }
 
 .sidebar{
-    background-color:#695CFE;
+    background-color:#c39143;
     height: 100vh;
     width: 20vw;
     position: fixed;
@@ -29,7 +29,7 @@
 }
 
 .sidebar-item:hover{
-    background-color:#9288f8;
+    /* background-color:#9288f8; */
     
 }
 
@@ -53,7 +53,7 @@
 }
 
 .post-btn{
-    background-color: #695CFE;
+    background-color: #edcbcf;
     width: 100px;
     border-radius: 30px;
     align-self: flex-end;
@@ -66,7 +66,7 @@
     height: 100vh;
     /* top: 35px; */
     left: 273px;
-    background-color: rgb(166, 240, 240);
+    background-color: #f4ebdc;
     border-right: 2px solid black;
     
 }
