@@ -1,29 +1,84 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.sidebar li a,.sidebar li, .sidebar-text{
+    list-style: none;
+    text-decoration: none;
+    color: black;
 }
 
 .sidebar{
-    background-color: blanchedalmond;
-    border: 2px solid black;
+    background-color:#c39143;
     height: 100vh;
     width: 20vw;
+    position: fixed;
+    border-right: 2px solid black;
 }
 
-.sidebar ul li{
-    padding: 20px 20px;
-    list-style: none;
-}
-
-.sidebar ul li a{
-    text-decoration: none;
-    color: black;
+.sidebar li{
+    border-radius: 30px;
     font-size: 1.5rem;
-    border-radius: 25px;
-    padding: 12px 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 9px 0px;
 }
 
+.sidebar-item:hover{
+    /* background-color:#9288f8; */
+    
+}
 
-.sidebar ul li a:hover{
-    background-color: burlywood;
+.askbar{
+    position: absolute;
+    top: 35px;
+    left: 23px;
+
+    /* background-color: yellowgreen; */
+    width: 700px;
+    height: 200px;
+    display:flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+
+#input{
+    width: 100%;
+    padding: 10px 20px;
+    /* height: 100px; */
+}
+
+.post-btn{
+    background-color: #edcbcf;
+    width: 100px;
+    border-radius: 30px;
+    align-self: flex-end;
+    margin: 10px 0px;
+}
+
+.main-section{
+    position: absolute;
+    width: 750px;
+    height: 100vh;
+    /* top: 35px; */
+    left: 273px;
+    background-color: #f4ebdc;
+    border-right: 2px solid black;
+    
+}
+
+.questions{
+    position: absolute;
+    top: 258px;
+    left: 23px;
+}
+
+.right-section{
+    position: absolute;
+    left: 1058px;
+    font-size: 2rem;
 }
