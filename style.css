@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.items{
+    display: flex;
+    list-style-type: none;
+    gap: 100px;
+    /* justify-content: center; */
+    margin-top: 35px;
+    margin-left: 50px;
+    font-size: larger;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.nav{
+    background-color: rgb(227, 205, 197);
+    height: 15vh;
+    border: 2px solid black;
+}
+
+#Searchbar{
+    width:17vw;
+    height:5vh;
+}
+
+li:hover{
+    color:rgb(150, 33, 3);
+}
+
+fieldset{
+    margin-top: 20px;
+    margin-left: 370px;
+    height: 180vh;
+    width: 45vw;
+}
