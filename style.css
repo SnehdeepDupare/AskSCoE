@@ -62,16 +62,17 @@ purple waala: #695CFE
     border-radius: 10px;
 }
 
+.sidebar li .sidebar-text, .sidebar li .bi{
+    font-size: 20px;
+    color: black;
+}
+
 .sidebar li .bi{
     min-width: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.sidebar li .sidebar-text, .sidebar li .bi{
-    font-size: 20px;
-    color: black;
+    /* font-size: 25px; */
 }
 
 .sidebar li a{
@@ -169,15 +170,41 @@ purple waala: #695CFE
 
 .askbar{
     /* position: absolute; */
+    padding: 10px;
     width: 700px;
-    height: 200px;
+    height: 300px;
     display: flex;
     flex-direction: column;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 
+.top .askbar .username{
+    display: flex;
+    /* background-color: red; */
+    align-items: center;
+}
+
+.top .askbar .username .acc-name{
+    font-size: 20px;
+}
+
+.askbar .textarea-text{
+    margin-top: 10px;
+}
+
+.top .askbar .bi{
+    margin-right: 10px;
+    /* border: 1px solid black; */
+    font-size: 38px;
+    display: flex;;
+
+}
 #input{
     width: 100%;
     padding: 10px 20px;
+    /* margin-bottom: -40px; */
 }
 
 .post-btn{
@@ -191,4 +218,3 @@ purple waala: #695CFE
 .post-btn:hover{
     color: white;
 }
-
