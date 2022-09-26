@@ -5,16 +5,39 @@
     font-family: 'Baloo Bhai 2', cursive;
 }
 
+:root{
+    /* Colors */
+    --body-color: #E4E9F7;
+    --sidebar-color: #fff;
+    --primary-color: #695CFE;
+    --primary-color-light: #dedaff;
+    --toggle-color: rgb(201, 201, 201);
+    --text-color: black;
+
+    /* main-section colors */
+    --post-bg-color: lightgray;
+    
+    /* Transitions */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
 body{
     height: 100vh;
-    background-color: #E4E9F7;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
 }
-/* 
-backgroundcolor: #E4E9F7
-sidebar: #FFF
-purple waala: #695CFE
-*/
 
+body.dark{
+    --body-color: #18191A;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #FFF;
+    --text-color: #ccc;
+}
 
 /* Sidebar */
 .sidebar{
@@ -23,7 +46,8 @@ purple waala: #695CFE
     position: fixed;
     height: 100%;
     width: 20vw;
-    background-color: #FFF;
+    background-color: var(--sidebar-color);
+    transition: var(--tran-05);
     padding: 10px 14px;
 }
 
@@ -51,6 +75,8 @@ purple waala: #695CFE
 .sidebar .text{
     font-size: 20px;
     font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-05);
 }
 
 .sidebar li{
@@ -64,7 +90,8 @@ purple waala: #695CFE
 
 .sidebar li .sidebar-text, .sidebar li .bi{
     font-size: 20px;
-    color: black;
+    color: var(--text-color);
+    transition: var(--tran-03);
 }
 
 .sidebar li .bi{
@@ -82,10 +109,11 @@ purple waala: #695CFE
     display: flex;
     align-items: center;
     border-radius: 10px;
+    transition: var(--tran-03);
 }
 
 .sidebar li a:hover{
-    background-color: #695CFE;
+    background-color: var(--primary-color);
 }
 
 .sidebar li a:hover .bi,
@@ -101,7 +129,8 @@ purple waala: #695CFE
 }
 
 .sidebar-menu .mode{
-    background-color: #E4E9F7;
+    background-color: var(--primary-color-light);
+    transition: var(--tran-05);
 }
 
 .sidebar-menu .mode .moon-sun{
@@ -113,9 +142,18 @@ purple waala: #695CFE
 
 .sidebar-menu .mode i{
     position: absolute;
+    transition: var(--tran-03);
 }
 
 .sidebar-menu .mode i.sun{
+    opacity: 0;
+}
+
+body.dark .sidebar-menu .mode i.sun{
+    opacity: 1;
+}
+
+body.dark .sidebar-menu .mode i.moon{
     opacity: 0;
 }
 
@@ -133,7 +171,8 @@ purple waala: #695CFE
     height: 22px;
     width: 44px;
     border-radius: 25px;
-    background-color: #FFF;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
 }
 
 .switch::before{
@@ -142,10 +181,15 @@ purple waala: #695CFE
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    transform: translateY(-50%);
     top: 50%;
     left: 5px;
-    background-color: #695CFE;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before{
+    left: 24px;
 }
 
 /* CEnter  section CSS */
@@ -156,16 +200,26 @@ purple waala: #695CFE
     left: 25vw;
     height: 100vh;
     width: calc(100% - 25vw);
+    transition: var(--tran-05);
+}
+
+body.dark .main-section{
+    color: var(--text-color);
 }
 
 .main-section .heading{
     font-size: 2rem;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 600;
+    transition: var(--tran-05);
 }
 
 .main-section .top{
     margin-top: 25px;
+}
+
+.top{
+    transition: var(--tran-05);
 }
 
 .askbar{
@@ -175,9 +229,14 @@ purple waala: #695CFE
     height: 300px;
     display: flex;
     flex-direction: column;
-    background-color: lightgray;
+    background-color: var(--post-bg-color);
     border: 1px solid gray;
     border-radius: 10px;
+    transition: var(--tran-05);
+}
+
+body.dark .askbar{
+    background-color: var(--body-color);
 }
 
 .top .askbar .username{
@@ -188,6 +247,7 @@ purple waala: #695CFE
 
 .top .askbar .username .acc-name{
     font-size: 20px;
+    /* padding-bottom: 0%; */
 }
 
 .askbar .textarea-text{
@@ -208,7 +268,8 @@ purple waala: #695CFE
 }
 
 .post-btn{
-    background-color: #695CFE;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     width: 100px;
     border-radius: 30px;
     align-self: flex-end;
@@ -217,4 +278,23 @@ purple waala: #695CFE
 
 .post-btn:hover{
     color: white;
+}
+
+/* POSTS SECTION */
+.posts-section{
+    position: absolute;
+    left: 25vw;
+    top: calc(100% - 262px);
+    padding: 10px;
+    width: 700px;
+    height: 300px;
+    background-color: var(--post-bg-color);
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: var(--tran-05);
+}
+
+body.dark .posts-section{
+    background-color: var(--body-color);
+    color: var(--text-color);
 }
