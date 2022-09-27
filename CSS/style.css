@@ -6,7 +6,7 @@
 }
 
 :root{
-    /* Colors */
+    /* ======= Colors ======= */
     --body-color: #E4E9F7;
     --sidebar-color: #fff;
     --primary-color: #695CFE;
@@ -17,7 +17,7 @@
     /* main-section colors */
     --post-bg-color: lightgray;
     
-    /* Transitions */
+    /* =======Transitions=======*/
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
     --tran-04: all 0.4s ease;
@@ -39,7 +39,7 @@ body.dark{
     --text-color: #ccc;
 }
 
-/* Sidebar */
+/* =======Sidebar======= */
 .sidebar{
     top: 0;
     left: 0;
@@ -192,7 +192,7 @@ body.dark .switch::before{
     left: 24px;
 }
 
-/* CEnter  section CSS */
+/* =======Center  section CSS =======*/
 
 .main-section{
     position: absolute;
@@ -218,9 +218,6 @@ body.dark .main-section{
     margin-top: 25px;
 }
 
-.top{
-    transition: var(--tran-05);
-}
 
 .askbar{
     /* position: absolute; */
@@ -274,27 +271,48 @@ body.dark .askbar{
     border-radius: 30px;
     align-self: flex-end;
     margin: 10px 0px;
+    transition: var(--tran-05);
 }
 
 .post-btn:hover{
     color: white;
 }
 
-/* POSTS SECTION */
+/* ======= POSTS SECTION =======*/
 .posts-section{
     position: absolute;
     left: 25vw;
     top: calc(100% - 262px);
-    padding: 10px;
+    /* padding: 10px; */
+    width: 700px;
+    /* height: 300px; */
+    /* background-color: var(--post-bg-color); */
+    /* border: 1px solid gray; */
+    border-radius: 10px;
+    transition: var(--tran-05);
+
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark .posts-section{
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+
+.posts-section .posts{
     width: 700px;
     height: 300px;
     background-color: var(--post-bg-color);
     border: 1px solid gray;
     border-radius: 10px;
     transition: var(--tran-05);
+    margin-bottom: 25px;
+    padding: 10px;
 }
 
-body.dark .posts-section{
+body.dark .posts-section .posts{
     background-color: var(--body-color);
     color: var(--text-color);
 }
