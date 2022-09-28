@@ -144,3 +144,7 @@ form .user-details .input-box{
     flex-direction: column;
   }
 }
+/* @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  } */
