@@ -104,12 +104,17 @@ button{
 }
 
 #branchs{
-    width: 15vw;
+    width: 18vw;
     height: 5vh;
+    padding-left:7px;
+    align-items: center;
+    
 }
 #years{
     width: 20vw;
     height: 5vh;
+    padding-left:7px;
+    align-items: center;
 }
 
 @media(max-width: 767px){
