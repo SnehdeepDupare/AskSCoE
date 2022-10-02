@@ -2,222 +2,223 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="regfinal.css">
-    <title>registration</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/registration.css">
+  <title>registration</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="inner">
-            <div class="image-holder">
-                <img src="random.jpg" alt="image">
+  <div class="wrapper">
+    <div class="inner">
+      <div class="image-holder">
+        <img src="..//IMAGES/random.jpg" alt="image">
 
-            </div>
-            <form>
-                <h3>registration Form</h3>
-                <div class="form-group">
-                    <input type="text" placeholder="First name" class="form-control" id="fname" required>
-                    <input type="text" placeholder="Last name" class="form-control" id="lname" required>
-                </div>
-
-                <div class="branch">
-                    <label for="Branch" id="font1">Branch:</label>
-                    <select name="branchs" id="branch" required>
-                        <option value="">Select</option>
-                        <option value="Computer">Computer </option>
-                        <option value="Information Technology">Information Technology</option>
-                        <option value="Civil">Civil </option>
-                        <option value="Mechanical">Mechanical </option>
-                        <option value="Automobile">Automobile </option>
-                        <option value="DataScience">DataScience</option>
-                        <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
-                        <option value="Electrical">Electrical</option>
-                    </select>
-                </div>
-                <br>
-
-                <div class="year" id="year1">
-                    <label for="Year" id="size1">Year:</label>
-                    <select name="years" id="year" required>
-                        <option value="">Select</option>
-                        <option value="First Year">First Year</option>
-                        <option value="Second Year">Second Year</option>
-                        <option value="Third Year">Third Year</option>
-                        <option value="Fourth Year">Fourth Year</option>
-                    </select>
-                </div>
-                <br>
-
-                <div class="form-wrapper">
-                    <input type="text" placeholder="Email Address" class="form-control" id="email" required>
-
-                </div>
-                <div class="form-wrapper">
-                    <input type="password" placeholder="Password" class="form-control" id="password" required>
-                    <span class="password_condition">Use 8 or more characters with a mix of letters, numbers &
-                        symbols</span>
-                </div>
-                <div class="form-wrapper">
-                    <input type="password" placeholder="Confirm Password" class="form-control" id="con_password" required>
-
-                </div>
-
-                <button type="button" id="registerBtn">Register</button>
-            </form>
+      </div>
+      <form>
+        <h3>registration Form</h3>
+        <div class="form-group">
+          <input type="text" placeholder="First name" class="form-control" id="fname" required>
+          <input type="text" placeholder="Last name" class="form-control" id="lname" required>
         </div>
+
+        <div class="branch">
+          <label for="Branch" id="font1">Branch:</label>
+          <select name="branchs" id="branch" required>
+            <option value="">Select</option>
+            <option value="Computer">Computer </option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Civil">Civil </option>
+            <option value="Mechanical">Mechanical </option>
+            <option value="Automobile">Automobile </option>
+            <option value="DataScience">DataScience</option>
+            <option value="Electronics and Telecommunication">Electronics and Telecommunication</option>
+            <option value="Electrical">Electrical</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="year" id="year1">
+          <label for="Year" id="size1">Year:</label>
+          <select name="years" id="year" required>
+            <option value="">Select</option>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+            <option value="Fourth Year">Fourth Year</option>
+          </select>
+        </div>
+        <br>
+
+        <div class="form-wrapper">
+          <input type="text" placeholder="Email Address" class="form-control" id="email" required>
+
+        </div>
+        <div class="form-wrapper">
+          <input type="password" placeholder="Password" class="form-control" id="password" required>
+          <span class="password_condition">Use 8 or more characters with a mix of letters, numbers &
+            symbols</span>
+        </div>
+        <div class="form-wrapper">
+          <input type="password" placeholder="Confirm Password" class="form-control" id="con_password" required>
+
+        </div>
+
+        <button type="button" id="registerBtn">Register</button>
+      </form>
     </div>
+  </div>
 </body>
 
 <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
 
 
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyC22XFmRiu_6iXBc43Qcc43B-j-wfWd3yo",
-        authDomain: "test-register1.firebaseapp.com",
-        projectId: "test-register1",
-        storageBucket: "test-register1.appspot.com",
-        messagingSenderId: "526538737939",
-        appId: "1:526538737939:web:ee7cf1b4b1d3a7b30e32e6"
-    };
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCQpiWauiLFGOTR1I3rrjdzaP4Wb_NsQCo",
+    authDomain: "askscoe.firebaseapp.com",
+    projectId: "askscoe",
+    storageBucket: "askscoe.appspot.com",
+    messagingSenderId: "619226149936",
+    appId: "1:619226149936:web:58d6f17af91214fccf29f5"
+  };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    // const database = getDatabase(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  // const database = getDatabase(app);
 
-    // firebase.initializeApp(firebaseConfig);
+  // firebase.initializeApp(firebaseConfig);
 
-    const database = getDatabase(app)
-    const auth = getAuth()
+  const database = getDatabase(app)
+  const auth = getAuth()
 
-    // var register
+  // var register
 
-    registerBtn.addEventListener('click', (e) => {
-        console.log("Onclick is working!?");
-        var fname = document.getElementById('fname').value
-        var lname = document.getElementById('lname').value
-        var branch = document.getElementById('branch').value
-        var year = document.getElementById('year').value
-        var email = document.getElementById('email').value
-        var password = document.getElementById('password').value
-        var con_password = document.getElementById('con_password').value
+  registerBtn.addEventListener('click', (e) => {
+    console.log("Onclick is working!?");
+    var fname = document.getElementById('fname').value
+    var lname = document.getElementById('lname').value
+    var branch = document.getElementById('branch').value
+    var year = document.getElementById('year').value
+    var email = document.getElementById('email').value
+    var password = document.getElementById('password').value
+    var con_password = document.getElementById('con_password').value
 
 
-        if (validate_email(email) == false || validate_password(password) == false) {
-            alert('Check your email or password')
-            return
-        }
-        if (validate_field(fname) == false || validate_field(lname) == false || validate_branch(branch) == false || validate_year(year) == false) {
-            alert('Please Fill all your details')
-        }
-        if (match_password(password, con_password) || false){
-            alert("Passwords don't match with each other")
-        }
-
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(function () {
-                var user = auth.currentUser
-
-                // var database_ref = database.ref()
-
-                var user_data = {
-                    fname: fname,
-                    lname: lname,
-                    branch: branch,
-                    year: year,
-                    email: email,
-                    last_login: Date.now()
-                }
-
-                // database_ref.child('users/' + user.uid).set(user_data)
-
-                set(ref(database, 'users/' + user.uid), {
-                    fname: fname,
-                    lname: lname,
-                    branch: branch,
-                    year: year,
-                    email: email,
-                    last_login: Date.now()
-                })
-
-                alert('User Created')
-            })
-            .catch(function (error) {
-                var error_code = error.code
-                var error_message = error.message
-
-                alert(error_message)
-            })
-    })
-
-    // Validate Functions
-    function validate_email(email) {
-        const expression = /^[^@]+@\w+(\.\w+)+\w$/
-        if (expression.test(email) == true) {
-            // Email is good
-            return true
-        } else {
-            // Email is not good
-            return false
-        }
+    if (validate_email(email) == false || validate_password(password) == false) {
+      alert('Check your email or password')
+      return
+    }
+    if (validate_field(fname) == false || validate_field(lname) == false || validate_branch(branch) == false || validate_year(year) == false) {
+      alert('Please Fill all your details')
+    }
+    if (match_password(password, con_password) || false) {
+      alert("Passwords don't match with each other")
     }
 
-    function validate_password(password) {
-        // Firebase only accepts lengths greater than 8
-        if (password < 8) {
-            return false
-        } else {
-            return true
-        }
-    }
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(function () {
+        var user = auth.currentUser
 
-    function match_password(password, con_password) {
-        if (password == con_password) {
-            return true
-        } else{
-            return false
-        }
-    }
+        // var database_ref = database.ref()
 
-    function validate_field(field) {
-        if (field == null) {
-            return false
+        var user_data = {
+          fname: fname,
+          lname: lname,
+          branch: branch,
+          year: year,
+          email: email,
+          last_login: Date.now()
         }
 
-        if (field.length <= 0) {
-            return false
-        } else {
-            return true
-        }
+        // database_ref.child('users/' + user.uid).set(user_data)
+
+        set(ref(database, 'users/' + user.uid), {
+          fname: fname,
+          lname: lname,
+          branch: branch,
+          year: year,
+          email: email,
+          last_login: Date.now()
+        })
+
+        alert('User Created')
+        
+      })
+      .catch(function (error) {
+        var error_code = error.code
+        var error_message = error.message
+
+        alert(error_message)
+      })
+  })
+
+  // Validate Functions
+  function validate_email(email) {
+    const expression = /^[^@]+@\w+(\.\w+)+\w$/
+    if (expression.test(email) == true) {
+      // Email is good
+      return true
+    } else {
+      // Email is not good
+      return false
+    }
+  }
+
+  function validate_password(password) {
+    // Firebase only accepts lengths greater than 8
+    if (password < 8) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  function match_password(password, con_password) {
+    if (password == con_password) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  function validate_field(field) {
+    if (field == null) {
+      return false
     }
 
-    var branch_value = document.getElementById('branch')
-    function validate_branch(branch) {
-        if (branch_value.value == "") {
-            return false
-        } else {
-            return true
-        }
+    if (field.length <= 0) {
+      return false
+    } else {
+      return true
     }
+  }
 
-    var year_value = document.getElementById('year')
-    function validate_year(year) {
-        if (year_value.value == "") {
-            return false
-        } else {
-            return true
-        }
+  var branch_value = document.getElementById('branch')
+  function validate_branch(branch) {
+    if (branch_value.value == "") {
+      return false
+    } else {
+      return true
     }
+  }
+
+  var year_value = document.getElementById('year')
+  function validate_year(year) {
+    if (year_value.value == "") {
+      return false
+    } else {
+      return true
+    }
+  }
 </script>
 <!-- <script src="register.js"></script> -->
 

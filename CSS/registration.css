@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body{
-  background: url(bgr.jpg);
+  background: url(..//IMAGES/bgr.jpg);
   background-size: cover;
   font-family: arial;
   color: #333;
