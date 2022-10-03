@@ -103,7 +103,7 @@
   // var register
 
   registerBtn.addEventListener('click', (e) => {
-    console.log("Onclick is working!?");
+    // console.log("Onclick is working!?");
     var fname = document.getElementById('fname').value
     var lname = document.getElementById('lname').value
     var branch = document.getElementById('branch').value
@@ -111,6 +111,7 @@
     var email = document.getElementById('email').value
     var password = document.getElementById('password').value
     var con_password = document.getElementById('con_password').value
+    var dt = new Date();
 
 
     if (validate_email(email) == false || validate_password(password) == false) {
@@ -120,8 +121,9 @@
     if (validate_field(fname) == false || validate_field(lname) == false || validate_branch(branch) == false || validate_year(year) == false) {
       alert('Please Fill all your details')
     }
-    if (match_password(password, con_password) || false) {
+    if (password != con_password) {
       alert("Passwords don't match with each other")
+      return
     }
 
     createUserWithEmailAndPassword(auth, email, password)
@@ -140,7 +142,6 @@
         }
 
         // database_ref.child('users/' + user.uid).set(user_data)
-
         set(ref(database, 'users/' + user.uid), {
           fname: fname,
           lname: lname,
@@ -159,6 +160,7 @@
 
         alert(error_message)
       })
+
   })
 
   // Validate Functions
@@ -182,13 +184,13 @@
     }
   }
 
-  function match_password(password, con_password) {
-    if (password == con_password) {
-      return true
-    } else {
-      return false
-    }
-  }
+  // function match_password(password, con_password) {
+  //   if ( password == con_password ) {
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
 
   function validate_field(field) {
     if (field == null) {

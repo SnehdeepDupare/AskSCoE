@@ -32,7 +32,7 @@ h5{
     font-size: larger;
 }
 
-#butn{
+#loginBtn{
     
     margin-left: 100px;
     width: 6vw;
@@ -47,12 +47,12 @@ h5{
     
 }
 
-#butn:hover{
+#loginBtn:hover{
     background-color: blue;
     cursor: pointer;
  }
 
-#form2Example17,#form2Example27{
+#email, #password{
     width: 20vw;
     height:6vh;
 
