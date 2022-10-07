@@ -191,15 +191,3 @@ body.dark .sidebar-menu .mode i.moon{
 body.dark .switch::before{
     left: 24px;
 }
-.card.mb-4{
-    border-width: 1.5px;
-    border-color: black;
-}
-.profile{
-    position: absolute;
-    top: 20px;
-    left: 320px;
-    border-image: 2px;
-    border-style: solid;
-    border-color: black;
-}
