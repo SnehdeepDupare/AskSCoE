@@ -1,16 +1,17 @@
 *{
   box-sizing: border-box;
+  font-family: 'Baloo Bhai 2', cursive;
 }
 body{
   background: url(..//IMAGES/bgr.jpg);
   background-size: cover;
-  font-family: arial;
+  /* font-family: arial; */
   color: #333;
   font-size: 13px;
   margin: 0;
 }
 input, select, button{
-  font-family: arial;
+  /* font-family: arial; */
   color: #333;    
   font-size: 14px;
 }
@@ -45,7 +46,7 @@ img{
 }
 .inner form{
   width: 50%;
-  padding-top: 36px;
+  padding-top: 13px;
   padding-left: 45px;
   padding-right: 45px;
 }
@@ -82,7 +83,7 @@ button{
   width: 164px;
   height: 51px;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 26px; /* 40 */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -101,7 +102,7 @@ button{
 
 #size1, #font1{
   font-size: medium;
-  font-family: arial;
+  /* font-family: arial; */
 }
 
 #branch{
@@ -109,7 +110,8 @@ button{
   height: 40px;
   padding-left:7px;
   align-items: center;
-  
+  margin-bottom: 11px;
+  cursor: pointer;
 }
 #year{
   width: 80%;
@@ -117,12 +119,23 @@ button{
   padding-left:7px;
   align-items: center;
   margin-left: 18px;
+  margin-bottom: 11px;
+  cursor: pointer;
 }
+
+/* #branch:focus, #year:focus{
+  outline: 2px solid black;
+  outline-offset: -1px;
+} */
 
 .form-wrapper .password_condition{
   color: gray;
   font-size: 10px;
   margin-top: 0px;
+}
+
+.backward-link{
+  margin-top: 10px;
 }
 
 @media(max-width: 767px){

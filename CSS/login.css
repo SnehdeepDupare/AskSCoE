@@ -58,6 +58,11 @@ h5{
 
 }
 
+.keepLogIn input{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
 /* @keyframes btn {
     0%{
         background-color: rgb(182, 182, 236);

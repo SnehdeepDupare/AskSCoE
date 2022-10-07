@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/registration.css">
   <title>registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             <option value="Electrical">Electrical</option>
           </select>
         </div>
-        <br>
+        <!-- <br> -->
 
         <div class="year" id="year1">
           <label for="Year" id="size1">Year:</label>
@@ -49,7 +50,7 @@
             <option value="Fourth Year">Fourth Year</option>
           </select>
         </div>
-        <br>
+        
 
         <div class="form-wrapper">
           <input type="text" placeholder="Email Address" class="form-control" id="email" required>
@@ -66,6 +67,10 @@
         </div>
 
         <button type="button" id="registerBtn">Register</button>
+
+        <div class="backward-link">
+          <a href="loginpage.html">Already have an account?</a>
+        </div>
       </form>
     </div>
   </div>
@@ -130,9 +135,12 @@
       .then(function () {
         var user = auth.currentUser
 
+        var displayName = fname.concat(" ",lname);
+
         // var database_ref = database.ref()
 
         var user_data = {
+          displayName : displayName,
           fname: fname,
           lname: lname,
           branch: branch,
@@ -143,6 +151,7 @@
 
         // database_ref.child('users/' + user.uid).set(user_data)
         set(ref(database, 'users/' + user.uid), {
+          displayName : displayName,
           fname: fname,
           lname: lname,
           branch: branch,
@@ -152,6 +161,7 @@
         })
 
         alert('User Created')
+        // console.log(user_data);
         
       })
       .catch(function (error) {

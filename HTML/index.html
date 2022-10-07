@@ -75,8 +75,8 @@
             </div>
 
             <div class="bottom-content">
-                <li class="sidebar-item" id="logout">
-                    <a href="loginpage.html">
+                <li class="sidebar-item" id="logoutBtn">
+                    <a href="" id="logout">
                         <i class="bi bi-power"></i>
                         <span class="text sidebar-text">
                             Logout
@@ -105,7 +105,7 @@
             <section class="askbar">
                 <div class="username">
                     <i class="bi bi-person-circle"></i>
-                    <span class="acc-name">Username</span>
+                    <span class="acc-name" id="username">Username</span>
                 </div>
                 <span class="textarea-text">
                     Ask Your Questions Here!
@@ -329,7 +329,9 @@
     </div>
 
 </body>
-<!-- <script src="../JAVASCRIPT/index.js"></script>
+
+<script src="../JAVASCRIPT/index.js"></script>
+
 <script type="module">
 
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
@@ -359,9 +361,39 @@
     const database = getDatabase(app)
     const auth = getAuth()
 
-    logout.addEventListener('click', (e) => {
-        console.log('Is this working?');
-    })
-</script> -->
+    var username = document.getElementById('username');
+    let logout = document.getElementById('logout');
+    var currentUser = null;
+
+    function getUsername(){
+        let keepLogIn = localStorage.getItem("keepLogIn");
+
+        if(keepLogIn == "yes"){
+            currentUser = JSON.parse(localStorage.getItem('user'));
+        }else{
+            currentUser = JSON.parse(sessionStorage.getItem('user'));
+        }
+    }
+
+    function Logout(){
+        sessionStorage.removeItem('user');
+        localStorage.removeItem('user');
+        localStorage.removeItem('keepLogIn');
+        window.location = "loginpage.html";
+    }
+
+    window.onload = function(){
+        getUsername();
+        if (currentUser == null){
+            window.location = "loginpage.html";
+        }else{
+            username.innerText = currentUser.email;
+
+            logout.href = "javascript:Logout()";
+        }
+    }
+
+    // logoutBtn.addEventListener('click', Logout());
+</script>
 
 </html>
