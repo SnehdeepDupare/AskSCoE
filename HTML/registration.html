@@ -53,9 +53,11 @@
 
 
         <div class="form-wrapper">
-          <input type="text" placeholder="Email Address" class="form-control" id="email" required>
-
+          <input type="text" placeholder="Email Address" class="form-control" id="email" onclick="changeDomain()"
+            required><span id="domain"></span>
         </div>
+
+
         <div class="form-wrapper">
           <input type="password" placeholder="Password" class="form-control" id="password" required>
           <span class="password_condition">Use 8 or more characters with a mix of letters, numbers &
@@ -87,7 +89,7 @@
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
-  
+
   const firebaseConfig = {
     apiKey: "AIzaSyBSRstW6S4O1Rk1cgAiVYzMYLiI6XL1UDI",
     authDomain: "askscoe-2f413.firebaseapp.com",
@@ -186,6 +188,43 @@
     }
   }
 
+  function changeDomain() {
+
+    var domain = document.getElementById("domain");
+    var branch = document.getElementById("branch").value;
+
+    if (branch == "Information Technology") {
+      domain.innerHTML = "@it.sce.edu.in";
+      domain = "@it.sce.edu.in";
+    } else if (branch == "Mechanical") {
+      domain.innerHTML = "@mech.sce.edu.in";
+      domain = "@mech.sce.edu.in";
+    } else if (branch == "Civil") {
+      domain.innerHTML = "@civil.sce.edu.in";
+      domain = "@civil.sce.edu.in";
+    } else if (branch == "Computer") {
+      domain.innerHTML = "@comps.sce.edu.in";
+      domain = "@comps.sce.edu.in";
+    } else if (branch == "Automobile") {
+      domain.innerHTML = "@auto.sce.edu.in";
+      domain = "@auto.sce.edu.in";
+    } else if (branch == "DataScience") {
+      domain.innerHTML = "@data.sce.edu.in";
+      domain = "@data.sce.edu.in";
+    } else if (branch == "Electrical") {
+      domain.innerHTML = "@elect.sce.edu.in";
+      domain = "@elect.sce.edu.in";
+    } else if (branch == "Electronics and Telecommunication") {
+      domain.innerHTML = "@extc.sce.edu.in";
+      domain = "@extc.sce.edu.in";
+    }
+
+    console.log(domain)
+  }
+
+
+
+
   function validate_password(password) {
     // Firebase only accepts lengths greater than 8
     if (password < 8) {
@@ -232,6 +271,22 @@
       return true
     }
   }
+
+
+  // function combine() {
+
+  //   let inpEmail = document.getElementById("inpEmail").value;
+  //   let domain1 = document.getElementById("domain").innerHTML;
+
+  //   // console.log(inpEmail);
+  //   // console.log(domain);
+
+
+  //   DisplayEmail.innerHTML = inpEmail.concat(domain1);
+
+  // }
+
+
 </script>
 <!-- <script src="register.js"></script> -->
 

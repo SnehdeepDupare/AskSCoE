@@ -73,10 +73,14 @@
     border: none;
     border-bottom: 1px solid #333;
     display: block;
-    width: 100%;
+    width: 70%;
     height: 40px;
     padding-right: 0;
     margin-bottom: 14px;
+  }
+
+  #email{
+    display: inline-block;
   }
   button{
     border: none;
