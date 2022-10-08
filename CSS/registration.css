@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size:15px;
+
   }
   body{
     background: url(..//IMAGES/bgr.jpg);
@@ -78,9 +81,9 @@
     height: 40px;
     padding-right: 0;
     margin-bottom: 14px;
-    font-weight:600;
-    font-size:15px;
-    font-family:Arial, Helvetica, sans-serif
+    /* font-weight:600;
+    font-size:15px; */
+    /* font-family:Arial, Helvetica, sans-serif */
   }
 
   #email{
@@ -114,7 +117,7 @@
   }
   
   #branch{
-    width: 80%;
+    width: 79%;
     height: 40px;
     padding-left:7px;
     align-items: center;
@@ -166,9 +169,9 @@
   position: absolute;
   margin-left: 0px;
   top: 14px;
-  font-weight: 800;
-  font-size: larger;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-weight: 800;
+  font-size: larger; */
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 
 }
 
