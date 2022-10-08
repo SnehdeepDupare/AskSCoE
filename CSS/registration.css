@@ -1,87 +1,89 @@
 *{
     box-sizing: border-box;
-}
-body{
-    background: url(bgr.jpg);
+    font-family: 'Baloo Bhai 2', cursive;
+  }
+  body{
+    background: url(..//IMAGES/bgr.jpg);
     background-size: cover;
-    font-family: arial;
+    /* font-family: arial; */
     color: #333;
     font-size: 13px;
     margin: 0;
-}
-input, select, button{
-    font-family: arial;
+  }
+  input, select, button{
+    /* font-family: arial; */
     color: #333;    
     font-size: 14px;
-}
-h3,h4{
+  }
+  h3,h4{
     margin: 0;
-
-}
-img{
-    max-width: 100%;
-}
-:focus{
+  
+  }
+  img{
+    width: 85%;
+  }
+  :focus{
     outline: none;
-}
-.wrapper{
+  }
+  .wrapper{
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.inner{
+  }
+  .inner{
     padding: 20px;
     background: #fff;
     max-width: 850px;
     margin: auto;
     display: flex;
-}
-.inner .image-holder{
+    height: 85vh;
+  }
+  .inner .image-holder{
     width: 50%;
-}
-.inner form{
+  }
+  .inner form{
     width: 50%;
-    padding-top: 36px;
+    padding-top: 13px;
     padding-left: 45px;
     padding-right: 45px;
-}
-.inner h3{
+  }
+  .inner h3{
     text-transform: uppercase;
     font-size: 25px;
     text-align: center;
     margin-bottom: 28px;
-}
-.form-group{
+  }
+  .form-group{
     display: flex;
-}
-.form-group input{
+  }
+  .form-group input{
     width: 50%;
-}
-.form-group input:first-child{
+  }
+  .form-group input:first-child{
     margin-right: 25px;
-}
-.form-wrapper{
+  }
+  .form-wrapper{
     position: relative;
-}
-.form-control{
+  }
+  .form-control{
     border: 1px solid #333;
     border: none;
     border-bottom: 1px solid #333;
     display: block;
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding-right: 0;
-    margin-bottom: 25px;
-}
-button{
+    margin-bottom: 14px;
+  }
+  button{
     border: none;
     width: 164px;
     height: 51px;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 26px; /* 40 */
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -90,34 +92,53 @@ button{
     background: #333;
     font-size: 15px;
     color: #fff;
-}
-/* .branch{
+  }
+  /* .branch{
     font-family: arial;
-}
-#year1{
+  }
+  #year1{
     font-family: arial;
-} */
-
-#size1, #font1{
+  } */
+  
+  #size1, #font1{
     font-size: medium;
-    font-family: arial;
-}
-
-#branchs{
-    width: 18vw;
-    height: 5vh;
+    /* font-family: arial; */
+  }
+  
+  #branch{
+    width: 80%;
+    height: 40px;
     padding-left:7px;
     align-items: center;
-    
-}
-#years{
-    width: 20vw;
-    height: 5vh;
+    margin-bottom: 11px;
+    cursor: pointer;
+  }
+  #year{
+    width: 80%;
+    height: 40px;
     padding-left:7px;
     align-items: center;
-}
-
-@media(max-width: 767px){
+    margin-left: 18px;
+    margin-bottom: 11px;
+    cursor: pointer;
+  }
+  
+  /* #branch:focus, #year:focus{
+    outline: 2px solid black;
+    outline-offset: -1px;
+  } */
+  
+  .form-wrapper .password_condition{
+    color: gray;
+    font-size: 10px;
+    margin-top: 0px;
+  }
+  
+  .backward-link{
+    margin-top: 10px;
+  }
+  
+  @media(max-width: 767px){
     inner{
         display: block;
     }
@@ -131,4 +152,4 @@ button{
     button{
         margin-top: 60px;
     }
-}
+  }

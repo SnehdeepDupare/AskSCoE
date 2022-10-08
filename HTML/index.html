@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,17 @@
     <title>AskSCoE</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="shortcut icon" href="../IMAGES/logos/test_logo_1.png" type="image/x-icon">
 
 </head>
+
 <body>
     <nav class="sidebar">
         <header>
@@ -34,47 +36,47 @@
         <div class="sidebar-menu">
             <div class="menu">
                 <!-- <ul class="menu-links"> -->
-                    <li class="sidebar-item">
-                        <a href="#">
-                            <i class="bi bi-house-fill"></i>
-                            <span class="text sidebar-text">
-                                Home
-                            </span>
-                        </a>
-                    </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <i class="bi bi-house-fill"></i>
+                        <span class="text sidebar-text">
+                            Home
+                        </span>
+                    </a>
+                </li>
 
-                    <li class="sidebar-item">
-                        <a href="#">
-                            <i class="bi bi-download"></i>
-                            <span class="text sidebar-text">
-                                Saved
-                            </span>
-                        </a>
-                    </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <i class="bi bi-download"></i>
+                        <span class="text sidebar-text">
+                            Saved
+                        </span>
+                    </a>
+                </li>
 
-                    <li class="sidebar-item">
-                        <a href="#">
-                            <i class="bi bi-person-circle"></i>
-                            <span class="text sidebar-text">
-                                Profile
-                            </span>
-                        </a>
-                    </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <i class="bi bi-person-circle"></i>
+                        <span class="text sidebar-text">
+                            Profile
+                        </span>
+                    </a>
+                </li>
 
-                    <li class="sidebar-item">
-                        <a href="#">
-                            <i class="bi bi-gear-wide-connected"></i>
-                            <span class="text sidebar-text">
-                                Settings
-                            </span>
-                        </a>
-                    </li>
+                <li class="sidebar-item">
+                    <a href="#">
+                        <i class="bi bi-gear-wide-connected"></i>
+                        <span class="text sidebar-text">
+                            Settings
+                        </span>
+                    </a>
+                </li>
                 <!-- </ul> -->
             </div>
 
             <div class="bottom-content">
-                <li class="sidebar-item">
-                    <a href="loginpage.html">
+                <li class="sidebar-item" id="logoutBtn">
+                    <a href="" id="logout">
                         <i class="bi bi-power"></i>
                         <span class="text sidebar-text">
                             Logout
@@ -103,228 +105,295 @@
             <section class="askbar">
                 <div class="username">
                     <i class="bi bi-person-circle"></i>
-                        <span class="acc-name">Username</span>
+                    <span class="acc-name" id="username">Username</span>
                 </div>
                 <span class="textarea-text">
                     Ask Your Questions Here!
                 </span>
-                <textarea name="query" id="input" cols="30" rows="10" placeholder="What do you want to ask or share?"></textarea>
+                <textarea name="query" id="input" cols="30" rows="10"
+                    placeholder="What do you want to ask or share?"></textarea>
                 <button type="submit" class="post-btn">Post</button>
             </section>
-        </section>
+    </section>
 
-        <div class="posts-section">
-            <div class="posts">
-                <div class="post-header">
-                    <div class="username">
-                        <i class="bi bi-person-circle"></i>
-                            <span class="acc-name">Username</span>
-                            <span class="branch-year">Branch-Year</span>    
-                    </div>
-                    <div class="timestamp">
-                        Timestamp
-                    </div>
+    <div class="posts-section">
+        <div class="posts">
+            <div class="post-header">
+                <div class="username">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="acc-name">Username</span>
+                    <span class="branch-year">Branch-Year</span>
                 </div>
-
-                <div class="question">
-                    <p>This is a random question asked by a random user.</p>
-                </div>
-
-                <div class="post-footer">
-                    <div class="like">
-                        <button>
-                            <i class="bi bi-suit-heart"></i>
-                            <i class="bi bi-suit-heart-fill"></i>
-                            Like
-                        </button>
-                    </div>
-                    <div class="reply">
-                        <button>
-                            <i class="bi bi-reply"></i>
-                            Reply
-                        </button>
-                    </div>
+                <div class="timestamp">
+                    Timestamp
                 </div>
             </div>
 
-            <div class="posts">
-                <div class="post-header">
-                    <div class="username">
-                        <i class="bi bi-person-circle"></i>
-                            <span class="acc-name">Username</span>
-                            <span class="branch-year">Branch-Year</span>    
-                    </div>
-                    <div class="timestamp">
-                        Timestamp
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                </div>
-
-                <div class="post-footer">
-                    <div class="like">
-                        <button>
-                            <i class="bi bi-suit-heart"></i>
-                            <i class="bi bi-suit-heart-fill"></i>
-                            Like
-                        </button>
-                    </div>
-                    <div class="reply">
-                        <button>
-                            <i class="bi bi-reply"></i>
-                            Reply
-                        </button>
-                    </div>
-                </div>
+            <div class="question">
+                <p>This is a random question asked by a random user.</p>
             </div>
 
-            <div class="posts">
-                <div class="post-header">
-                    <div class="username">
-                        <i class="bi bi-person-circle"></i>
-                            <span class="acc-name">Username</span>
-                            <span class="branch-year">Branch-Year</span>    
-                    </div>
-                    <div class="timestamp">
-                        Timestamp
-                    </div>
+            <div class="post-footer">
+                <div class="like">
+                    <button>
+                        <i class="bi bi-suit-heart"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        Like
+                    </button>
                 </div>
-
-                <div class="question">
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                </div>
-
-                <div class="post-footer">
-                    <div class="like">
-                        <button>
-                            <i class="bi bi-suit-heart"></i>
-                            <i class="bi bi-suit-heart-fill"></i>
-                            Like
-                        </button>
-                    </div>
-                    <div class="reply">
-                        <button>
-                            <i class="bi bi-reply"></i>
-                            Reply
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="posts">
-                <div class="post-header">
-                    <div class="username">
-                        <i class="bi bi-person-circle"></i>
-                            <span class="acc-name">Username</span>
-                            <span class="branch-year">Branch-Year</span>    
-                    </div>
-                    <div class="timestamp">
-                        Timestamp
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                </div>
-
-                <div class="post-footer">
-                    <div class="like">
-                        <button>
-                            <i class="bi bi-suit-heart"></i>
-                            <i class="bi bi-suit-heart-fill"></i>
-                            Like
-                        </button>
-                    </div>
-                    <div class="reply">
-                        <button>
-                            <i class="bi bi-reply"></i>
-                            Reply
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="posts">
-                <div class="post-header">
-                    <div class="username">
-                        <i class="bi bi-person-circle"></i>
-                            <span class="acc-name">Username</span>
-                            <span class="branch-year">Branch-Year</span>    
-                    </div>
-                    <div class="timestamp">
-                        Timestamp
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                </div>
-
-                <div class="post-footer">
-                    <div class="like">
-                        <button>
-                            <i class="bi bi-suit-heart"></i>
-                            <i class="bi bi-suit-heart-fill"></i>
-                            Like
-                        </button>
-                    </div>
-                    <div class="reply">
-                        <button>
-                            <i class="bi bi-reply"></i>
-                            Reply
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="posts">
-                <div class="post-header">
-                    <div class="username">
-                        <i class="bi bi-person-circle"></i>
-                            <span class="acc-name">Username</span>
-                            <span class="branch-year">Branch-Year</span>    
-                    </div>
-                    <div class="timestamp">
-                        Timestamp
-                    </div>
-                </div>
-
-                <div class="question">
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                    <p>This is a random question asked by a random user.</p>
-                </div>
-
-                <div class="post-footer">
-                    <div class="like">
-                        <button>
-                            <i class="bi bi-suit-heart"></i>
-                            <i class="bi bi-suit-heart-fill"></i>
-                            Like
-                        </button>
-                    </div>
-                    <div class="reply">
-                        <button>
-                            <i class="bi bi-reply"></i>
-                            Reply
-                        </button>
-                    </div>
+                <div class="reply">
+                    <button>
+                        <i class="bi bi-reply"></i>
+                        Reply
+                    </button>
                 </div>
             </div>
         </div>
 
-    <script src="../JAVASCRIPT/index.js"></script>
+        <div class="posts">
+            <div class="post-header">
+                <div class="username">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="acc-name">Username</span>
+                    <span class="branch-year">Branch-Year</span>
+                </div>
+                <div class="timestamp">
+                    Timestamp
+                </div>
+            </div>
+
+            <div class="question">
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+            </div>
+
+            <div class="post-footer">
+                <div class="like">
+                    <button>
+                        <i class="bi bi-suit-heart"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        Like
+                    </button>
+                </div>
+                <div class="reply">
+                    <button>
+                        <i class="bi bi-reply"></i>
+                        Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts">
+            <div class="post-header">
+                <div class="username">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="acc-name">Username</span>
+                    <span class="branch-year">Branch-Year</span>
+                </div>
+                <div class="timestamp">
+                    Timestamp
+                </div>
+            </div>
+
+            <div class="question">
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+            </div>
+
+            <div class="post-footer">
+                <div class="like">
+                    <button>
+                        <i class="bi bi-suit-heart"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        Like
+                    </button>
+                </div>
+                <div class="reply">
+                    <button>
+                        <i class="bi bi-reply"></i>
+                        Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts">
+            <div class="post-header">
+                <div class="username">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="acc-name">Username</span>
+                    <span class="branch-year">Branch-Year</span>
+                </div>
+                <div class="timestamp">
+                    Timestamp
+                </div>
+            </div>
+
+            <div class="question">
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+            </div>
+
+            <div class="post-footer">
+                <div class="like">
+                    <button>
+                        <i class="bi bi-suit-heart"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        Like
+                    </button>
+                </div>
+                <div class="reply">
+                    <button>
+                        <i class="bi bi-reply"></i>
+                        Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts">
+            <div class="post-header">
+                <div class="username">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="acc-name">Username</span>
+                    <span class="branch-year">Branch-Year</span>
+                </div>
+                <div class="timestamp">
+                    Timestamp
+                </div>
+            </div>
+
+            <div class="question">
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+            </div>
+
+            <div class="post-footer">
+                <div class="like">
+                    <button>
+                        <i class="bi bi-suit-heart"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        Like
+                    </button>
+                </div>
+                <div class="reply">
+                    <button>
+                        <i class="bi bi-reply"></i>
+                        Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts">
+            <div class="post-header">
+                <div class="username">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="acc-name">Username</span>
+                    <span class="branch-year">Branch-Year</span>
+                </div>
+                <div class="timestamp">
+                    Timestamp
+                </div>
+            </div>
+
+            <div class="question">
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+                <p>This is a random question asked by a random user.</p>
+            </div>
+
+            <div class="post-footer">
+                <div class="like">
+                    <button>
+                        <i class="bi bi-suit-heart"></i>
+                        <i class="bi bi-suit-heart-fill"></i>
+                        Like
+                    </button>
+                </div>
+                <div class="reply">
+                    <button>
+                        <i class="bi bi-reply"></i>
+                        Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
+<script src="../JAVASCRIPT/index.js"></script>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCQpiWauiLFGOTR1I3rrjdzaP4Wb_NsQCo",
+        authDomain: "askscoe.firebaseapp.com",
+        projectId: "askscoe",
+        storageBucket: "askscoe.appspot.com",
+        messagingSenderId: "619226149936",
+        appId: "1:619226149936:web:58d6f17af91214fccf29f5"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    // const database = getDatabase(app);
+
+    // firebase.initializeApp(firebaseConfig);
+
+    const database = getDatabase(app)
+    const auth = getAuth()
+
+    var username = document.getElementById('username');
+    let logout = document.getElementById('logout');
+    var currentUser = null;
+
+    function getUsername(){
+        let keepLogIn = localStorage.getItem("keepLogIn");
+
+        if(keepLogIn == "yes"){
+            currentUser = JSON.parse(localStorage.getItem('user'));
+        }else{
+            currentUser = JSON.parse(sessionStorage.getItem('user'));
+        }
+    }
+
+    function Logout(){
+        sessionStorage.removeItem('user');
+        localStorage.removeItem('user');
+        localStorage.removeItem('keepLogIn');
+        window.location = "loginpage.html";
+    }
+
+    window.onload = function(){
+        getUsername();
+        if (currentUser == null){
+            window.location = "loginpage.html";
+        }else{
+            username.innerText = currentUser.email;
+
+            logout.href = "javascript:Logout()";
+        }
+    }
+
+    // logoutBtn.addEventListener('click', Logout());
+</script>
+
 </html>
