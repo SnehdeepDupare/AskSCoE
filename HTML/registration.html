@@ -50,7 +50,7 @@
             <option value="Fourth Year">Fourth Year</option>
           </select>
         </div>
-        
+
 
         <div class="form-wrapper">
           <input type="text" placeholder="Email Address" class="form-control" id="email" required>
@@ -87,13 +87,14 @@
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
+  
   const firebaseConfig = {
-    apiKey: "AIzaSyCQpiWauiLFGOTR1I3rrjdzaP4Wb_NsQCo",
-    authDomain: "askscoe.firebaseapp.com",
-    projectId: "askscoe",
-    storageBucket: "askscoe.appspot.com",
-    messagingSenderId: "619226149936",
-    appId: "1:619226149936:web:58d6f17af91214fccf29f5"
+    apiKey: "AIzaSyBSRstW6S4O1Rk1cgAiVYzMYLiI6XL1UDI",
+    authDomain: "askscoe-2f413.firebaseapp.com",
+    projectId: "askscoe-2f413",
+    storageBucket: "askscoe-2f413.appspot.com",
+    messagingSenderId: "1090425829609",
+    appId: "1:1090425829609:web:efebed642bafae1afdd878"
   };
 
   // Initialize Firebase
@@ -135,12 +136,12 @@
       .then(function () {
         var user = auth.currentUser
 
-        var displayName = fname.concat(" ",lname);
+        var displayName = fname.concat(" ", lname);
 
         // var database_ref = database.ref()
 
         var user_data = {
-          displayName : displayName,
+          displayName: displayName,
           fname: fname,
           lname: lname,
           branch: branch,
@@ -151,7 +152,7 @@
 
         // database_ref.child('users/' + user.uid).set(user_data)
         set(ref(database, 'users/' + user.uid), {
-          displayName : displayName,
+          displayName: displayName,
           fname: fname,
           lname: lname,
           branch: branch,
@@ -162,7 +163,7 @@
 
         alert('User Created')
         // console.log(user_data);
-        
+
       })
       .catch(function (error) {
         var error_code = error.code
