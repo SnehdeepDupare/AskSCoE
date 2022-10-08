@@ -53,8 +53,9 @@
 
 
         <div class="form-wrapper">
-          <input type="text" placeholder="Email Address" class="form-control" id="email" onclick="changeDomain()"
-            required><span id="domain"></span>
+
+          <input type="text" placeholder="Email Address" class="form-control" id="email" required><span
+            id="domain"></span>
         </div>
 
 
@@ -177,53 +178,17 @@
   })
 
   // Validate Functions
-  function validate_email(email) {
-    const expression = /^[^@]+@\w+(\.\w+)+\w$/
-    if (expression.test(email) == true) {
-      // Email is good
-      return true
-    } else {
-      // Email is not good
-      return false
-    }
-  }
 
-  function changeDomain() {
-
-    var domain = document.getElementById("domain");
-    var branch = document.getElementById("branch").value;
-
-    if (branch == "Information Technology") {
-      domain.innerHTML = "@it.sce.edu.in";
-      domain = "@it.sce.edu.in";
-    } else if (branch == "Mechanical") {
-      domain.innerHTML = "@mech.sce.edu.in";
-      domain = "@mech.sce.edu.in";
-    } else if (branch == "Civil") {
-      domain.innerHTML = "@civil.sce.edu.in";
-      domain = "@civil.sce.edu.in";
-    } else if (branch == "Computer") {
-      domain.innerHTML = "@comps.sce.edu.in";
-      domain = "@comps.sce.edu.in";
-    } else if (branch == "Automobile") {
-      domain.innerHTML = "@auto.sce.edu.in";
-      domain = "@auto.sce.edu.in";
-    } else if (branch == "DataScience") {
-      domain.innerHTML = "@data.sce.edu.in";
-      domain = "@data.sce.edu.in";
-    } else if (branch == "Electrical") {
-      domain.innerHTML = "@elect.sce.edu.in";
-      domain = "@elect.sce.edu.in";
-    } else if (branch == "Electronics and Telecommunication") {
-      domain.innerHTML = "@extc.sce.edu.in";
-      domain = "@extc.sce.edu.in";
-    }
-
-    console.log(domain)
-  }
-
-
-
+  // function validate_email(email) {
+  //   const expression = /^[^@]+@\w+(\.\w+)+\w$/
+  //   if (expression.test(email) == true) {
+  //     // Email is good
+  //     return true
+  //   } else {
+  //     // Email is not good
+  //     return false
+  //   }
+  // }
 
   function validate_password(password) {
     // Firebase only accepts lengths greater than 8
@@ -272,7 +237,42 @@
     }
   }
 
+  email.addEventListener('click', (e) => {
 
+    var domain = document.getElementById("domain");
+    var branch = document.getElementById("branch").value;
+
+    if (branch == "Information Technology") {
+      domain.innerHTML = "@it.sce.edu.in";
+      domain = "@it.sce.edu.in";
+    } else if (branch == "Mechanical") {
+      domain.innerHTML = "@mech.sce.edu.in";
+      domain = "@mech.sce.edu.in";
+    } else if (branch == "Civil") {
+      domain.innerHTML = "@civil.sce.edu.in";
+      domain = "@civil.sce.edu.in";
+    } else if (branch == "Computer") {
+      domain.innerHTML = "@comps.sce.edu.in";
+      domain = "@comps.sce.edu.in";
+    } else if (branch == "Automobile") {
+      domain.innerHTML = "@auto.sce.edu.in";
+      domain = "@auto.sce.edu.in";
+    } else if (branch == "DataScience") {
+      domain.innerHTML = "@data.sce.edu.in";
+      domain = "@data.sce.edu.in";
+    } else if (branch == "Electrical") {
+      domain.innerHTML = "@elect.sce.edu.in";
+      domain = "@elect.sce.edu.in";
+    } else if (branch == "Electronics and Telecommunication") {
+      domain.innerHTML = "@extc.sce.edu.in";
+      domain = "@extc.sce.edu.in";
+    }
+
+    // console.log(domain)
+  });
+
+
+  
   // function combine() {
 
   //   let inpEmail = document.getElementById("inpEmail").value;
