@@ -365,35 +365,35 @@
     let logout = document.getElementById('logout');
     var currentUser = null;
 
-    function getUsername(){
+    function getUsername() {
         let keepLogIn = localStorage.getItem("keepLogIn");
 
-        if(keepLogIn == "yes"){
+        if (keepLogIn == "yes") {
             currentUser = JSON.parse(localStorage.getItem('user'));
-        }else{
+        } else {
             currentUser = JSON.parse(sessionStorage.getItem('user'));
         }
     }
 
-    function Logout(){
+    function Logout() {
         sessionStorage.removeItem('user');
         localStorage.removeItem('user');
         localStorage.removeItem('keepLogIn');
         window.location = "loginpage.html";
     }
 
-    window.onload = function(){
+    window.onload = function () {
         getUsername();
-        if (currentUser == null){
+        if (currentUser == null) {
             window.location = "loginpage.html";
-        }else{
+        } else {
             username.innerText = currentUser.email;
 
             logout.href = "javascript:Logout()";
         }
     }
 
-    // logoutBtn.addEventListener('click', Logout());
+    logoutBtn.addEventListener('click', Logout());
 </script>
 
 </html>
