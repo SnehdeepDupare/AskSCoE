@@ -1,0 +1,45 @@
+*{
+    color: black;
+}
+body{
+    background-color: grey;
+}
+.wrapper{
+    height: 550px;
+    width: 550px;
+    box-sizing: border-box;
+    /* border: 5px;
+    border-style: solid;
+    border-color: greenyellow; */
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    position: absolute;
+    left: 300px;
+    top: 10px;
+    /* background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202109/blaack-x512.jpg?CdTuyNBjg0f0R8BNJEazZZJb3Ee1mgx4); */
+}
+.left{
+    margin-left: 150px;
+}
+img{
+    border-style: solid;
+    border-color: white;
+}
+p{
+    /* color: white; */
+}
+h2{
+    /* color: aqua; */
+}
+h3{
+    /* color: white; */
+    font-size: 20px;
+}
+h4{
+    /* color: rgb(255, 153, 0); */
+}
+.left p{
+    font-size: 20px;
+}

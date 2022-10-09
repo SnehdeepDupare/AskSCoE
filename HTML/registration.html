@@ -51,12 +51,12 @@
           </select>
         </div>
 
-        <span id="contanier">
+        <!-- <span id="contanier"> -->
           <div class="form-wrapper email_domain">
             <input type="text" placeholder="Email Address" class="form-control" id="email" required><span
               id="domain"></span>
           </div>
-        </span>
+        <!-- </span> -->
 
         <div class="form-wrapper">
           <input type="password" placeholder="Password" class="form-control" id="password" required>
@@ -280,9 +280,9 @@
     // console.log(inpEmail);
     // console.log(domain);
 
-    var concatenation = inpEmail.concat(domain1);
+    var DisplayEmail = inpEmail.concat(domain1);
 
-    document.getElementById("contanier").innerHTML = concatenation;
+    // document.getElementById("contanier").innerHTML = concatenation;
     // console.log(concatenation);
   })
 
