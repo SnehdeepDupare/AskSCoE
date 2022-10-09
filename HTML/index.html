@@ -37,7 +37,7 @@
             <div class="menu">
                 <!-- <ul class="menu-links"> -->
                 <li class="sidebar-item">
-                    <a href="#">
+                    <a href="index.html">
                         <i class="bi bi-house-fill"></i>
                         <span class="text sidebar-text">
                             Home
@@ -55,7 +55,7 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a href="#">
+                    <a href="profile.html">
                         <i class="bi bi-person-circle"></i>
                         <span class="text sidebar-text">
                             Profile
@@ -375,25 +375,25 @@
         }
     }
 
-    function Logout() {
-        sessionStorage.removeItem('user');
-        localStorage.removeItem('user');
-        localStorage.removeItem('keepLogIn');
-        window.location = "loginpage.html";
-    }
+    // function Logout() {
+    //     sessionStorage.removeItem('user');
+    //     localStorage.removeItem('user');
+    //     localStorage.removeItem('keepLogIn');
+    //     window.location = "loginpage.html";
+    // }
 
-    window.onload = function () {
-        getUsername();
-        if (currentUser == null) {
-            window.location = "loginpage.html";
-        } else {
-            username.innerText = currentUser.email;
+    // window.onload = function () {
+    //     getUsername();
+    //     if (currentUser == null) {
+    //         window.location = "loginpage.html";
+    //     } else {
+    //         username.innerText = currentUser.email;
 
-            logout.href = "javascript:Logout()";
-        }
-    }
+    //         logout.href = "javascript:Logout()";
+    //     }
+    // }
 
-    logoutBtn.addEventListener('click', Logout());
+    // logoutBtn.addEventListener('click', Logout());
 </script>
 
 </html>
