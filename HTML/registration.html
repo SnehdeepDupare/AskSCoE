@@ -50,12 +50,12 @@
             <option value="Fourth Year">Fourth Year</option>
           </select>
         </div>
-        
 
-        <div class="form-wrapper">
-          <input type="text" placeholder="Email Address" class="form-control" id="email" required>
-
+        <div class="form-wrapper email_domain">
+          <input type="text" placeholder="Email Address" class="form-control" id="email" required><span
+            id="domain"></span>
         </div>
+
         <div class="form-wrapper">
           <input type="password" placeholder="Password" class="form-control" id="password" required>
           <span class="password_condition">Use 8 or more characters with a mix of letters, numbers &
@@ -135,12 +135,12 @@
       .then(function () {
         var user = auth.currentUser
 
-        var displayName = fname.concat(" ",lname);
+        var displayName = fname.concat(" ", lname);
 
         // var database_ref = database.ref()
 
         var user_data = {
-          displayName : displayName,
+          displayName: displayName,
           fname: fname,
           lname: lname,
           branch: branch,
@@ -151,7 +151,7 @@
 
         // database_ref.child('users/' + user.uid).set(user_data)
         set(ref(database, 'users/' + user.uid), {
-          displayName : displayName,
+          displayName: displayName,
           fname: fname,
           lname: lname,
           branch: branch,
@@ -162,7 +162,7 @@
 
         alert('User Created')
         // console.log(user_data);
-        
+
       })
       .catch(function (error) {
         var error_code = error.code
@@ -174,16 +174,17 @@
   })
 
   // Validate Functions
-  function validate_email(email) {
-    const expression = /^[^@]+@\w+(\.\w+)+\w$/
-    if (expression.test(email) == true) {
-      // Email is good
-      return true
-    } else {
-      // Email is not good
-      return false
-    }
-  }
+
+  // function validate_email(email) {
+  //   const expression = /^[^@]+@\w+(\.\w+)+\w$/
+  //   if (expression.test(email) == true) {
+  //     // Email is good
+  //     return true
+  //   } else {
+  //     // Email is not good
+  //     return false
+  //   }
+  // }
 
   function validate_password(password) {
     // Firebase only accepts lengths greater than 8
@@ -231,6 +232,59 @@
       return true
     }
   }
+
+  email.addEventListener('click', (e) => {
+
+    var domain = document.getElementById("domain");
+    var branch = document.getElementById("branch").value;
+
+    if (branch == "Information Technology") {
+      domain.innerHTML = "@it.sce.edu.in";
+      domain = "@it.sce.edu.in";
+    } else if (branch == "Mechanical") {
+      domain.innerHTML = "@mech.sce.edu.in";
+      domain = "@mech.sce.edu.in";
+    } else if (branch == "Civil") {
+      domain.innerHTML = "@civil.sce.edu.in";
+      domain = "@civil.sce.edu.in";
+    } else if (branch == "Computer") {
+      domain.innerHTML = "@comps.sce.edu.in";
+      domain = "@comps.sce.edu.in";
+    } else if (branch == "Automobile") {
+      domain.innerHTML = "@auto.sce.edu.in";
+      domain = "@auto.sce.edu.in";
+    } else if (branch == "DataScience") {
+      domain.innerHTML = "@data.sce.edu.in";
+      domain = "@data.sce.edu.in";
+    } else if (branch == "Electrical") {
+      domain.innerHTML = "@elect.sce.edu.in";
+      domain = "@elect.sce.edu.in";
+    } else if (branch == "Electronics and Telecommunication") {
+      domain.innerHTML = "@extc.sce.edu.in";
+      domain = "@extc.sce.edu.in";
+    }
+
+    // console.log(domain)
+  });
+
+
+
+  password.addEventListener('click', function () {
+
+    var inpEmail = document.getElementById("email").value;
+    var domain1 = document.getElementById("domain").innerHTML;
+
+    // console.log(inpEmail);
+    // console.log(domain);
+
+    var DisplayEmail = inpEmail.concat(domain1);
+    console.log(DisplayEmail);
+
+    // document.getElementById("contanier").innerHTML = DisplayEmail;
+    // console.log(concatenation);
+  })
+
+
 </script>
 <!-- <script src="register.js"></script> -->
 
