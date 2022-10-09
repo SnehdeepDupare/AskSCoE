@@ -15,22 +15,32 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
-    /* position: absolute;
-    left: 300px;
-    top: 10px; */
-    margin-left: 350px;
-    margin-top: 20px;
+    position: absolute;
+    left: 320px;
+    top: 15px;
+    /* margin-left: 350px;
+    margin-top: 20px; */
     /* background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/202109/blaack-x512.jpg?CdTuyNBjg0f0R8BNJEazZZJb3Ee1mgx4); */
 }
 .left{
-    margin-left: 150px;
+    margin-left: 180px;
 }
 img{
     border-style: solid;
     border-color: white;
+    border-radius: 18px;
 }
 .left p{
     font-size: 20px;
+}
+
+.data{
+    display: flex;
+    gap: 6px;
+}
+
+.userinput{
+        padding: 4px;
 }
 
 * {
@@ -249,4 +259,3 @@ body.dark .sidebar-menu .mode i.moon {
 body.dark .switch::before {
     left: 24px;
 }
-
