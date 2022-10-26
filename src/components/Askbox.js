@@ -25,7 +25,7 @@ function Askbox() {
 
         db.collection('questions').add({
             question: input,
-            inputUrl: inputUrl,
+            imageUrl: inputUrl,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             user: user
         })

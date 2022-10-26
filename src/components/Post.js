@@ -13,7 +13,7 @@ import firebase from 'firebase/compat/app'
 
 Modal.setAppElement('#root');
 
-function Post({ Id, question, image, timestamp, askscoeUser }) {
+function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
 
     const user = useSelector(selectUser)
     const [openModal, setOpenModal] = useState(false);
@@ -75,7 +75,7 @@ function Post({ Id, question, image, timestamp, askscoeUser }) {
                     <span>{question}</span>
                 </div>
 
-                <img src={image} alt='' />
+                <img src={imageUrl} alt='' />
 
                 <div className='post_reply'>{
                     getReply.map(({ id, replies }) => (
@@ -104,7 +104,7 @@ function Post({ Id, question, image, timestamp, askscoeUser }) {
                                                 color: "green"
                                             }}>
                                             {
-                                                replies.user.displayName ? user.displayName : reply.user.email
+                                                replies.user.displayName ? replies.user.displayName : replies.user.email
                                             } on {new Date(replies.timestamp?.toDate()).toLocaleString()}
                                         </span>
                                     </span>

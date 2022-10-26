@@ -26,7 +26,7 @@ function Feed() {
                 <Post
                     key={id}
                     Id={id}
-                    image={question.imageUrl}
+                    imageUrl={question.imageUrl}
                     question={question.question}
                     timestamp={question.timestamp}
                     askscoeUser={question.user}
