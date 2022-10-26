@@ -1,0 +1,7 @@
+.feed{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    /* background-color: beige; */
+    margin-left: 20px;
+}

@@ -1,0 +1,110 @@
+.askbox{
+    /* margin: 50px 12px 0px 0px; */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.askbox:hover{
+    border: 1px solid gray;
+}
+
+.askbox .askbox_info{
+    /* background-color: rgb(206, 206, 108); */
+    display: flex;
+    align-items: center;
+}
+
+.askbox .askbox_info h4{
+    margin: 0px 10px;
+}
+
+.askbox .askbox_query{
+    margin-top: 5px;
+    
+}
+
+.modal_title{
+    font-size: 24px;
+    border-bottom: 1px solid gray;
+}
+
+.modal_info{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.modal_info .avatar{
+    margin-right: 10px;
+}
+
+
+.modal_info .modal_scope{
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 50px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.modal_field{
+    margin-top: 25px;
+}
+
+.modal_field .modal_inpfield{
+    width: 100%;
+
+}
+
+.modal_fieldlink{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal_fieldlink .modal_linkfield{
+    margin-left: 5px;
+    width: 100%;
+    font-size: small;
+}
+
+.modal_buttons{
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 252px;
+    justify-content: flex-end;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+.modal_buttons .add{
+    background-color: #695CFE;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.modal_buttons .add:hover{
+    background-color: #9892df;
+}
+
+.modal_buttons .cancel{
+    /* background-color: rgb(180, 180, 180); */
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.modal_buttons .cancel:hover{
+    background-color: lightgray;
+    
+}

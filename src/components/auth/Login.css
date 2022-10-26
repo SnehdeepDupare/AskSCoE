@@ -1,0 +1,133 @@
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url(../../images/bgr.jpg);
+}
+
+.login_container{
+    margin-top: 50px;
+    padding-top: 50px;
+    height: 500px;
+    width: 800px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.login_container .login_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_container .login_top .login_logo img{
+    height: 100px;
+}
+
+.login_auth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex: 0.3;    */
+}
+
+.login_auth_options{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.login_container .login_auth .login_auth_options img{
+    height: 40px;
+}
+
+.login_container .login_auth .login_auth_options .login_auth_option{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    padding: 5px;
+    margin-left: 25px;
+}
+.login_container .login_auth .login_auth_options .login_auth_option:hover{
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.loginSetUp{
+    /* background-color: tomato; */
+    /* margin-top: 100px; */
+    height: 320px;
+    width: 500px;
+    /* flex: 0.7; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.loginSetUp .signin_text{
+    font-size: 20px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.loginSetUp .login_inpFields input{
+    /* width: 100%; */
+    margin-left: 80px;
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.loginSetUp .login_inpFields input:hover{
+    border: 1px solid gray;
+}
+
+.loginSetUp .button_container{
+    display: flex;
+    margin-left: 80px;
+}
+
+.loginSetUp button{
+    margin-top: 10px;
+    width: 80px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #9892df;
+    border-radius: 10px;
+}
+
+.loginSetUp button:hover{
+    background-color: #695CFE;
+}
+
+.loginSetUp .forgot_link,
+.loginSetUp .register_link{
+    margin-left: 80px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.loginSetUp .forgot_link{
+    margin-top: 5px;
+}
+
+.loginSetUp .register_link{
+    margin-top: 10px;
+}
+
+.loginSetUp .forgot_link:hover,
+.loginSetUp .register_link:hover{
+    text-decoration: underline;
+}
