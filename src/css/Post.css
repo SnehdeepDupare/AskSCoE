@@ -33,6 +33,11 @@
     /* border: 1px solid black; */
 }
 
+.post .post_body .post_question:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .post .post_footer {
     display: flex;
     align-items: center;

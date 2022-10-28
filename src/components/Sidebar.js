@@ -10,52 +10,98 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import { auth } from '../firebase';
+import { Link, NavLink } from 'react-router-dom';
 
 function Sidebar() {
+
+    // const sidebar_items = [
+    //     {
+    //         icon: <HomeIcon/>,
+    //         path: "/",
+    //         name: "Home"
+    //     },
+    //     {
+    //         icon: <SaveAltOutlinedIcon/>,
+    //         path: "/saved",
+    //         name: "Saved"
+    //     },
+    //     {
+    //         icon: <AccountCircleIcon/>,
+    //         path: "/profile",
+    //         name: "Profile"
+    //     },
+    //     {
+    //         icon: <SettingsIcon/>,
+    //         path: "/settings",
+    //         name: "Settings"
+    //     }
+    // ]
+
     return (
         <div className='sidebar'>
             <div className='sidebar_content'>
-            <div className='sidebar_menu'>
-                <div className='sidebar_logo'>
-                    <img src={test_logo_1} /> AskSCoE
-                    {/* <img src={name_transparent_2} /> */}
+                <div className='sidebar_menu'>
+                    <div className='sidebar_logo'>
+                        <img src={test_logo_1} /> AskSCoE
+                        {/* <img src={name_transparent_2} /> */}
+                    </div>
+
+                    {/* {
+                            sidebar_items.map((item, index) => (
+                                <NavLink to = {item.path} key = { index } className='sidebar_item'>
+                                    <div className='icons'>{item.icon}</div>
+                                    <div className = 'link-text'>{item.name}</div>
+                                </NavLink>
+                            ))
+                        } */}
+
+
+
+                    <div className='sidebar_items'>
+                        <Link to='/' className='item_link'>
+                            <div className='sidebar_item'>
+                                <span>
+                                    <HomeIcon />
+                                    Home
+
+                                </span>
+                            </div>
+                        </Link>
+
+                        <Link to='/saved' className='item_link'>
+                            <div className='sidebar_item'>
+                                <span>
+                                    <SaveAltOutlinedIcon />
+                                    Saved
+                                </span>
+                            </div>
+                        </Link>
+
+                        <Link to='/profile' className='item_link'>
+                            <div className='sidebar_item'>
+                                <span>
+                                    <AccountCircleIcon />
+                                    Profile
+                                </span>
+                            </div>
+                        </Link>
+
+                        <Link to='/settings' className='item_link'>
+                            <div className='sidebar_item'>
+                                <span>
+                                    <SettingsIcon />
+                                    Settings
+                                </span>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
 
-                <div className='sidebar_items'>
-                    <div className='sidebar_item'>
-                        <span>
-                        <HomeIcon />
-                            Home
-                        </span>
-                    </div>
-
-                    <div className='sidebar_item'>
-                        <span>
-                        <SaveAltOutlinedIcon />
-                            Saved
-                        </span>
-                    </div>
-
-                    <div className='sidebar_item'>
-                        <span>
-                        <AccountCircleIcon />
-                            Profile
-                        </span>
-                    </div>
-
-                    <div className='sidebar_item'>
-                        <span>
-                        <SettingsIcon />
-                            Settings
-                        </span>
-                    </div>
-                    </div>
-                </div>
                 <div className='sidebar_footer'>
                     <div className='sidebar_footer_item'>
                         <span onClick={() => auth.signOut()}>
                             <LogoutIcon />
-                        Logout
+                            Logout
                         </span>
                     </div>
 
@@ -74,7 +120,10 @@ function Sidebar() {
                     </div>
                 </div>
             </div>
-        </div>
+            {/* <main>
+                {children}
+            </main> */}
+        </div >
     )
 }
 

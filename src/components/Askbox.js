@@ -35,7 +35,20 @@ function Askbox() {
     }
 
     return (
-        <div className='askbox'>
+        <motion.div className='askbox'
+        initial={{
+            opacity:0,
+            x:300
+            // scale:0
+        }}
+        animate={{
+            opacity: 1,
+            x:0,
+            // scale:1,
+            transition:{
+                duration: 0.7
+            }
+        }}>
             <div className='askbox_info'>
                 <Avatar
                     src={user.photo}
@@ -53,7 +66,7 @@ function Askbox() {
                     onRequestClose={() => setOpenModal(false)}
                     shouldCloseOnOverlayClick={false}
                     style={{
-                        overlay: {
+                        overlay:{
                             backgroundColor: "rgba(0,0,0,0)",
                             width: 700,
                             height: 600,
@@ -62,9 +75,9 @@ function Askbox() {
                             left: "50%",
                             marginTop: "-250px",
                             // marginLeft: "-350px"
-                            // boxShadow: "4px 4px 4px  rgba(0,0,0,1)"
-
+                            // boxShadow: "4px 4px 4px  rgba(0,0,0,0.5)"
                         }
+                      
                     }}>
 
                     <div className='modal_title'>
@@ -98,10 +111,11 @@ function Askbox() {
 
                     <div className='modal_fieldlink'>
                         <LinkIcon />
-                        <Input type="text" className='modal_linkfield'
+                        <Input
+                            type="text" className='modal_linkfield'
                             value={inputUrl}
                             onChange={(e) => setInputUrl(e.target.value)}
-                            placeholder="Optional: Include a link that gives context"
+                            placeholder="Optional: You can add an Image Url as an attachment for context"
                         />
 
                     </div>
@@ -114,7 +128,7 @@ function Askbox() {
                     </div>
                 </Modal>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

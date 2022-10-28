@@ -10,6 +10,7 @@ import { selectQuestionId, selectQuestionName, setQuestionInfo } from '../featur
 import db from '../firebase';
 import { selectUser } from '../features/userSlice';
 import firebase from 'firebase/compat/app'
+import { motion } from "framer-motion";
 
 Modal.setAppElement('#root');
 
@@ -52,7 +53,21 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
     }
 
     return (
-        <div className='post'
+        <motion.div 
+        initial={{
+            opacity:0,
+            x:300
+            // scale:0
+        }}
+        animate={{
+            opacity: 1,
+            x:0,
+            // scale:1,
+            transition:{
+                duration: 0.7
+            }
+        }}
+        className='post'
             onClick={() => dispatch(setQuestionInfo({
                 questionId: Id,
                 questionName: question
@@ -195,7 +210,7 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
 
                 </div>
             </div>
-        </div >
+        </motion.div >
     )
 }
 

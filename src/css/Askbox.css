@@ -1,6 +1,6 @@
 .askbox{
     /* margin: 50px 12px 0px 0px; */
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -27,6 +27,11 @@
 .askbox .askbox_query{
     margin-top: 5px;
     
+}
+
+.askbox .askbox_query span:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .modal_title{
