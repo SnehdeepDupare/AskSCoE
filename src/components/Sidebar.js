@@ -42,8 +42,8 @@ function Sidebar() {
             <div className='sidebar_content'>
                 <div className='sidebar_menu'>
                     <div className='sidebar_logo'>
+                        {/* <img src='/images/logos/A_logo.png' /> AskSCoE */}
                         <img src='/images/logos/test_logo_1.png' /> AskSCoE
-                        {/* <img src={name_transparent_2} /> */}
                     </div>
 
                     {/* {

@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/kingthings-exeter-2');
+
+
 :root {
     /* ======= Colors ======= */
     --body-color: #E4E9F7;
@@ -49,11 +52,14 @@
     /* background-color: aquamarine; */
     display: flex;
     align-items: center;
+    font-family: 'Kingthings Exeter', sans-serif;
+    font-size: 30px;
 }
 
 .sidebar .sidebar_logo img{
     height: 50px;
     border-radius: 10px;
+    margin-right: 10px;
     /* box-shadow: 4px 4px 4px rgba(0,0,0,0.5); */
 }
 
