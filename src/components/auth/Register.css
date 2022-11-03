@@ -1,0 +1,98 @@
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background: url(../../images/bgr.jpg); */
+}
+
+.register_container{
+    /* margin-top: 50px; */
+    padding-top: 40px;
+    height: 550px;
+    width: 800px;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.register_container .register_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register_container .register_top .register_logo img{
+    height: 100px;
+}
+.register_content{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register_text{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+
+}
+
+.register_setup{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* background-color: cadetblue; */
+    width: 700px;
+    height: 300px;
+}
+
+.register_left, .register_right{
+    /* background-color: tomato; 
+    border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 10px; */
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.register_inpField{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.register_inpField .reg_label{
+    font-size: 16px;
+}
+
+.register_inpField .input{
+    padding: 5px;
+    width: 90%;
+    align-self: center;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.regBtn{
+    background-color: #9892df;
+    cursor: pointer;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.regBtn:hover{
+    background-color: #695CFE;
+}

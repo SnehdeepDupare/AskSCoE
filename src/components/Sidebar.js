@@ -1,7 +1,7 @@
 import React from 'react'
 import "../css/Sidebar.css"
-import test_logo_1 from "../images/logos/test_logo_1.png"
-import name_transparent_2 from "../images/logos/name_transparent_2.png"
+// import test_logo_1 from "../../public/images/logos/test_logo_1.png"
+// import name_transparent_2 from "../../public/images/logos/name_transparent_2.png"
 import HomeIcon from '@mui/icons-material/Home';
 import SaveAltOutlinedIcon from '@mui/icons-material/SaveAltOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -42,7 +42,7 @@ function Sidebar() {
             <div className='sidebar_content'>
                 <div className='sidebar_menu'>
                     <div className='sidebar_logo'>
-                        <img src={test_logo_1} /> AskSCoE
+                        <img src='/images/logos/test_logo_1.png' /> AskSCoE
                         {/* <img src={name_transparent_2} /> */}
                     </div>
 

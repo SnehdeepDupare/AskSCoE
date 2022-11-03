@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url(../../images/bgr.jpg);
+    background: url(../../../public/images/bgr.jpg);
 }
 
 .login_container{

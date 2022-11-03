@@ -22,6 +22,11 @@
     margin: 0px 5px;
 }
 
+.post_header .post_timestamp{
+    color: gray;
+    font-size: small;
+}
+
 .post .post_body {
     margin-top: 10px;
 }
@@ -51,7 +56,8 @@
     cursor: pointer;
 }
 
-.post .post_footer .post_reply:hover {
+.post .post_footer .post_reply:hover,
+.post .post_footer .post_like:hover {
     color: gray;
 }
 
@@ -77,10 +83,10 @@
     padding-bottom: 5px;
 }
 
-.modal_question span{
+/* .modal_question span{
     font-size: 13px;
     color: gray;
-}
+} */
 
 .modal_question h3{
     align-self: center;

@@ -11,6 +11,7 @@ import db from '../firebase';
 import { selectUser } from '../features/userSlice';
 import firebase from 'firebase/compat/app'
 import { motion } from "framer-motion";
+import { collection, deleteDoc, doc, onSnapshot, setDoc } from 'firebase/firestore'
 
 Modal.setAppElement('#root');
 
@@ -20,11 +21,43 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
     const [openModal, setOpenModal] = useState(false);
     const dispatch = useDispatch()
 
+    // Logic for question
     const questionId = useSelector(selectQuestionId)
     const questionName = useSelector(selectQuestionName)
+    // Logic for reply
     const [reply, setReply] = useState("")
-
     const [getReply, setGetReply] = useState([])
+    // Logic for likes
+    const [likes, setLikes] = useState([]);
+    const [hasLiked, setHasLiked] = useState(false);
+
+
+    // useEffect(() =>
+    //     onSnapshot(collection(db, 'questions', Id, 'likes'), (snapshot) =>
+    //         setLikes(snapshot.docs)
+    //     ),
+    //     [db, Id]
+    // );
+
+    // useEffect(() =>
+    //     setHasLiked(
+    //         likes.findIndex((like) => like.id === user?.user?.uid) !== -1
+    //     ),
+    //     [likes]
+    // );
+
+
+    // const likePost = async () => {
+    //     if (hasLiked) {
+    //         await deleteDoc(doc(db, 'questions', Id, 'likes', user.uid));
+    //     } else {
+    //         await setDoc(doc(db, 'questions', Id, 'likes', user.uid), {
+    //             username: user.displayName,
+    //         }); 
+    //     }
+    // };
+
+    // console.log(hasLiked);
 
     useEffect(() => {
         if (questionId) {
@@ -33,7 +66,7 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
                 replies: doc.data()
             }))))
         }
-    })
+    }, [])
 
     const handleReply = (e) => {
         e.preventDefault()
@@ -53,21 +86,21 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
     }
 
     return (
-        <motion.div 
-        initial={{
-            opacity:0,
-            x:300
-            // scale:0
-        }}
-        animate={{
-            opacity: 1,
-            x:0,
-            // scale:1,
-            transition:{
-                duration: 0.7
-            }
-        }}
-        className='post'
+        <motion.div
+            initial={{
+                opacity: 0,
+                x: 300
+                // scale:0
+            }}
+            animate={{
+                opacity: 1,
+                x: 0,
+                // scale:1,
+                transition: {
+                    duration: 0.7
+                }
+            }}
+            className='post'
             onClick={() => dispatch(setQuestionInfo({
                 questionId: Id,
                 questionName: question
@@ -80,9 +113,9 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
                 <h4>
                     <span>{askscoeUser.displayName ? askscoeUser.displayName : askscoeUser.email}</span>
                 </h4>
-                <span>Branch</span>
-                <span>-Year</span>
-                <span>{new Date(timestamp?.toDate()).toLocaleString()}</span>
+                {/* <span>Branch</span>
+                <span>-Year</span> */}
+                <span className='post_timestamp'>{new Date(timestamp?.toDate()).toLocaleString()}</span>
             </div>
 
             <div className='post_body'>
@@ -128,20 +161,17 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
                                 ) : (
                                     ""
                                 )}
-
                         </p>
-
                     ))
                 }
 
                 </div>
 
                 <div className='post_footer'>
-                    <div className='post_like'>
+                    {/* <div className='post_like' onClick={likePost}>
                         <FavoriteBorderOutlinedIcon />
                         Like
-
-                    </div>
+                    </div> */}
                     <div className='post_reply'
                         onClick={() => setOpenModal(true)}
                     >
@@ -167,15 +197,15 @@ function Post({ Id, question, imageUrl, timestamp, askscoeUser }) {
                         }}>
 
                         <div className='modal_question'>
-                            <span>replying to</span>
+                            <span style={{fontSize:'13px', color:'gray'}}>replying to</span>
                             <h3>{question}</h3>
                             <p>
-                                asked by{" "}
-                                <span className='name'>
+                                <span style={{fontSize:'13px', color:'gray'}}>asked by{" "}</span> 
+                                <span className='name' >
                                     {askscoeUser.displayName ? askscoeUser.displayName : askscoeUser.email}
                                 </span>{" "}
                                 {""}
-                                on {" "}
+                                <span style={{fontSize:'13px', color:'gray'}}>on {" "}</span>
                                 <span className='name'>
                                     {new Date(timestamp?.toDate()).toLocaleString()}
                                 </span>

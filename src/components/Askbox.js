@@ -56,8 +56,8 @@ function Askbox() {
                 <h4>
                     <span> {user.displayName ? user.displayName : user.email}</span>
                 </h4>
-                <span>Branch</span>
-                <span>-Year</span>
+                {/* <span>Branch</span>
+                <span>-Year</span> */}
             </div>
             <div className='askbox_query'>
                 <span onClick={() => setOpenModal(true)}>Enter Your Query!!</span>

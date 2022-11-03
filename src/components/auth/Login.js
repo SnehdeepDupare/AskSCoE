@@ -1,14 +1,24 @@
 import React, { useState } from 'react'
 import "./Login.css"
-import name_transparent_2 from "../../images/logos/name_transparent_2.png"
-import google_logo from "../../images/logos/google_logo.png"
+// import name_transparent_2 from "../../../public/images/logos/name_transparent_2.png"
+// import google_logo from "../../../public/images/logos/google_logo.png"
 import { auth, provider } from '../../firebase';
-
+import userSlice, { selectUser } from '../../features/userSlice';
+import { sendEmailVerification, sendSignInLinkToEmail } from 'firebase/auth'
 import Register from './Register';
-import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link, useNavigate } from 'react-router-dom';
+import firebase from 'firebase/compat/app';
+import { authUser } from '../../App'
+import { useSelector } from 'react-redux';
 
 function Login() {
 
+    // const user = useSelector(selectUser);
+
+    // const navigate = useNavigate();
+    // const navRegister = () => {
+    //     navigate('/register')
+    // }
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -33,6 +43,7 @@ function Login() {
     const handleRegister = (e) => {
         e.preventDefault()
         auth.createUserWithEmailAndPassword(email, password)
+            // await auth.user.sendEmailVerification()
             .then((auth) => {
 
                 if (auth) {
@@ -46,13 +57,15 @@ function Login() {
     }
 
 
-    const RouteRegister = (e) => {
-        <Router>
-            <Routes>
-                <Route path="/Register" element={Register} />
-            </Routes>
-        </Router>
-    }
+
+
+    // const RouteRegister = (e) => {
+    //     <Router>
+    //         <Routes>
+    //             <Route path="/Register" element={Register} />
+    //         </Routes>
+    //     </Router>
+    // }
 
     return (
         <div className='login'>
@@ -60,7 +73,7 @@ function Login() {
                 <div className='login_container'>
                     <div className='login_top'>
                         <div className='login_logo'>
-                            <img src={name_transparent_2} alt='logo' />
+                            <img src='/images/logos/name_transparent_2.png' alt='logo' />
                         </div>
                         <div className='logo_tagline'>
                             <span className='logo_tagline_text'>
@@ -72,7 +85,7 @@ function Login() {
                     <div className='login_auth'>
                         <div className='login_auth_options'>
                             <div className='login_auth_option' onClick={signIn}>
-                                <img src={google_logo} />
+                                <img src='/images/logos/google_logo.png' />
                                 <span className='auth_text'>
                                     Continue with Google
                                 </span>
@@ -104,9 +117,7 @@ function Login() {
                                 <Route path="/register" element={<Register />} />
                             </Routes> */}
 
-                            <Link to='/register'>
-                                <span className='register_link'>  Don't have an account? Click Here! </span>
-                            </Link>
+                            <span className='register_link' >  Don't have an account? Click Here! </span >
 
                         </div>
                     </div>

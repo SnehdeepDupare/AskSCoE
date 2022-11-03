@@ -1,9 +1,10 @@
 .profile {
     background-color: rgb(255, 238, 142);
-    margin: 20px 0px 0px 20px;
-    flex: 0.7;
+    margin: 20px 0px 0px 22vw;
+    /* flex: 0.7; */
     padding: 10px;
     display: flex;
+    width: 70vw;
 }
 
 .left_info, .right_info, .profile_desc {

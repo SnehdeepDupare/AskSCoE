@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 import Register from './auth/Register'
 
 
-function Askscoe({ children }) {
+function Askscoe() {
   return (
     <motion.div className='askscoe'
       initial={{
@@ -29,14 +29,8 @@ function Askscoe({ children }) {
           <Route path="/saved" element={<Saved />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
-
-
-          <Route path="/register" element={<Register />} />
-
-
         </Routes>
         {/* <Feed /> */}
-        {/* {children} */}
       </BrowserRouter>
     </motion.div>
   )

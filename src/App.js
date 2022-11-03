@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Askscoe from './components/Askscoe';
 import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
+
 
 function App() {
 
@@ -32,9 +35,12 @@ function App() {
 
   return (
     <div className="App">
+     
       {
         user ? (<Askscoe />) : (<Login />)
       }
+      {/* <Register /> */}
+      {/* <Login /> */}
 
       
     </div>
