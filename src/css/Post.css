@@ -1,0 +1,148 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+
+}
+
+.post:hover {
+    border: 1px solid gray;
+}
+
+.post .post_header {
+    display: flex;
+    align-items: center;
+}
+
+.post .post_header span {
+    margin: 0px 5px;
+}
+
+.post_header .post_timestamp{
+    color: gray;
+    font-size: small;
+}
+
+.post .post_body {
+    margin-top: 10px;
+}
+
+.post .post_body img {
+    object-fit: contain;
+    width: 100%;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+}
+
+.post .post_body .post_question:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.post .post_footer {
+    display: flex;
+    align-items: center;
+}
+
+.post .post_footer .post_like,
+.post .post_footer .post_reply {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.post .post_footer .post_reply:hover,
+.post .post_footer .post_like:hover {
+    color: gray;
+}
+
+
+.post_save {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.post_save:hover {
+    color: gray
+}
+
+
+.modal_question {
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+
+    padding-bottom: 5px;
+}
+
+/* .modal_question span{
+    font-size: 13px;
+    color: gray;
+} */
+
+.modal_question h3{
+    align-self: center;
+}
+
+.modal_reply{
+    /* background-color: beige; */
+    height: 300px;
+    margin-top: 5px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.modal_reply textarea{
+    /* height: 100%; */
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.modal_reply textarea:hover{
+    border: 1px solid black;
+}
+
+.modal_button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+.modal_button .cancel{
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.modal_button .cancel:hover{
+    background-color: lightgray;
+}
+
+.modal_button .add{
+    border-radius: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: #695CFE;
+
+}
+
+.modal_button .add:hover{
+    background-color: #9892df;
+}
