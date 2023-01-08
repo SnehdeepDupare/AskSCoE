@@ -9,7 +9,7 @@ const firebaseConfig = {
     storageBucket: "askscoe-2c873.appspot.com",
     messagingSenderId: "358068618925",
     appId: "1:358068618925:web:e6bafb70a16ca861176824"
-  };
+};
 
   const firebaseApp = firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
